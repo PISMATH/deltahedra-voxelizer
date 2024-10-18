@@ -2,7 +2,7 @@ import trimesh
 import numpy as np
 
 # Ask the user for the STL file path and the output file name
-stl_mesh_path = input("Enter the path to your STL file (e.g., 'sphere.stl'): ")
+stl_mesh_path = input("Enter the path to your STL file (e.g., 'input.stl'): ")
 output_file = input("Enter the output filename (e.g., 'output.scad'): ")
 
 # Load the mesh from the STL file
@@ -17,7 +17,7 @@ x = farthest_distance
 range_min = int(np.floor(-x))
 range_max = int(np.ceil(x))
 
-print(range_max**3*8)
+print(f"Estimated {range_max**3*8} point in mesh checks")
 # Generate all oct_points for a, b, c in the range [-2x, 2x]
 oct_points = []
 tetra_points_b = []
